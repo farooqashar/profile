@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { useState } from "react";
 import { GoogleLogout } from "react-google-login";
 
-const clientID = "519544500582-2jfk9i7kak8qtni2ku906hbdcrcfh98a.apps.googleusercontent.com"
+const clientID =
+  "519544500582-2jfk9i7kak8qtni2ku906hbdcrcfh98a.apps.googleusercontent.com";
 
 const LogOut = () => {
+  const [status, setStatus] = useState("Logged In");
 
-  const onSuccess = () => {
-    console.log('Logout made successfully');
-    alert('Logout made successfully ✌');
+  const onSuccess = (res) => {
+    setStatus("Logged Out");
   };
 
-    return (
-        <div>
+  return (
+    <div>
+      <h3 className="text-info">{status}</h3>
       <GoogleLogout
         clientId={clientID}
         buttonText="Sign Out"
         onLogoutSuccess={onSuccess}
       ></GoogleLogout>
-        </div>
-    )
-
+    </div>
+  );
 };
 
 export default LogOut;
