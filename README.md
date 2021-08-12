@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Google Profile Site
+
+This is a simple site designed for a user to login using their Google account and see their information.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
