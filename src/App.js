@@ -16,7 +16,6 @@ function onSignIn(googleUser) {
     <div className="App">
     <LogIn />
     <LogOut />
-    {/* <div className="g-signin2" data-onsuccess="onSignIn"></div> */}
     </div>
   );
 }
